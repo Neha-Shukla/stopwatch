@@ -1,14 +1,265 @@
-<!DOCTYPE html>
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <head>
-        <meta charset="UTF-8">
-        </head>
-        <body>
-            <h1 id="timer">00:00.000</h1>
-            <button id="toggle">start</button>
-            <button id="reset">reset</button>
-            <script src="js/stopwatch.js"></script>
-            <script src="js/main.js"></script>
-        </body>
-    
+        <title>
+
+        </title>
+            <style>
+                .right{
+                    float:right;
+                    padding-right: 10px;
+                    margin-right: 10px;
+                }
+                .lower{
+                    margin-left: 13px;
+                    margin-right: 13px;
+                }
+                 body{
+                    margin:0px;
+                }
+                h2{
+                    font-size:large;
+                }
+                .head{
+                    font-weight: 550;
+                    font-size: larger;
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    padding-bottom: 30px;
+                }
+                .above{
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    height: 150px;
+                    background-image: url("xyz.jpg");
+                    width: 100%;
+                    margin: 0;
+                    background-size: cover;
+                    background-position: center center;
+                    background-attachment: fixed;
+                    position:relative;
+                    color:white;
+                    text-align: center;
+                    padding: 10px;
+                }
+               
+               .below1{
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-left: 10px;
+                height:15vh;
+                border: 1px solid rgb(19, 16, 16);
+                border-radius: 25px;
+                box-shadow: 10px 0px 10px 0px #aaaaaa;
+                word-wrap: break-word;
+                border-width: 1px 5px;
+                margin:0 auto;
+                line-height: 2.2;
+               }
+               .below2{
+                
+                font-weight: bold;
+                padding-top: 10px;
+                margin-left: 20px;
+                margin-right: 10px;
+                padding-left: 10px;
+                height:14vh;
+                border: 1px solid rgb(19, 16, 16);
+                border-radius: 25px;
+                box-shadow: 10px 0px 10px 0px #aaaaaa;
+                word-wrap: break-word;
+                border-width: 1px 5px;
+                margin:0 auto;
+               
+               }
+               .tax{
+
+                margin-top: 50px;
+                color:darkgray;
+                font-weight: bold;
+                }
+                .image{
+                position: absolute;
+                top:50%;
+                width:fit-content;
+                margin:0 45%;
+                }
+                .png{
+                max-width:100px;
+                max-height:100px;
+                }
+                .im{
+                height:40px;
+                width:auto;
+                    
+                }
+                .column1 {
+                line-height:10px;
+                float: left;
+                width: 80%;
+                height: 50px;
+                }
+                .column2 {
+                padding-top: 3px;
+                float: right;
+                height:20px;
+                width: 20%;
+                }
+                @media screen and (max-width:360px) {
+                h2{
+                margin-left: 2%;
+                font-size:small;
+                }
+                .below1{
+                font-size:10px;
+                }
+                .below2{
+                font-size:8px;
+                }
+                .column1 {
+                margin-top: 8px;
+                float: left;
+                width: 80%;
+                }
+                .column2 {
+                float: right;
+                width: 10%;
+                }
+                .row:after {
+                content: "";
+                display: table;
+                clear: both;
+                }
+                
+                .tax{
+                margin-left:30% ;
+                font-size:small;
+                }
+                .im{
+                height:27px;
+                width:auto;
+                    
+                }
+                }
+                @media (max-width:670px){
+                    h2{
+                    margin-left:-3%;
+                    font-size:small;
+                }
+                .column1{
+                margin-top: 2px;
+                }
+                .below1{
+                font-size:10px;
+                }
+                .below2{
+                font-size:10px;
+                }
+                .image{
+                margin:0 40%;
+                }
+                .tax{
+                margin-left: 37%;
+                font-size:small;
+                }
+                .im{
+                height:30px;
+                width:auto;
+                } 
+                }
+                @media (min-width:670px){
+                    h2{
+                       margin-left: -6%;
+                    font-size:medium;
+                }
+                .column1{
+                margin-top: 10px;
+                }
+                .below1{
+                font-size: 12px;
+                }
+                .below2{
+                font-size: 14px;
+                }  
+                .image{
+                margin: 0 41%;
+                }
+                .tax{
+                margin-left:40% ;
+                font-size:medium;
+                }
+                .im{
+                height:34px;
+                width:auto;    
+                }
+                }
+                @media (min-width:1000px){
+                
+                h2{
+                    margin-left:-1%;
+                font-size:large;
+                }
+                .below1{
+                font-size: 16px;
+                }
+                .below2{
+                font-size: 16px;
+                }
+                .image{
+                margin: 0 45%;
+                height:16px;
+                }
+                .tax{
+                margin-left: 44%;
+                }
+                .im{
+                height:40px;
+                width:auto;
+                    
+                }
+                }
+            </style>
+           
+    </head>
+    <body>
+        <header>
+         <div class="above">
+                    <h2>Abhishek Tripathi</h2>
+                    <div class="image">
+                        <img src="av.jpg" class="png">
+                     </div>
+         </div>
+     <p class="tax">
+        Professor, Taxation
+     </p>
+        </header>
+        <div class="lower">
+         <div class="head">About</div>
+         <div class="below1">
+            <p class="para">Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..</p>
+            <div class="right"><a href="#">More</a></div>
+        </div>
+         <div class="head">Posts</div>
+         <div class="below2">
+            <div class="row">
+                <div class="column1">
+                    20 Tips for CA Inter Taxation Preparation
+                    <br>   
+                </div>
+                <div class="column2"><img src="jerry.jpg" class="im"></div>
+            </div> 
+        <div class="row">
+                <div class="column1">
+                    Why traditional way of coaching for CA would not work any more
+                    <br>   
+                </div>
+                <div class="column2"><img src="jerry.jpg" class="im"></div>
+            </div> 
+        </div>
+         </div>
+     
+    </body>
 </html>
